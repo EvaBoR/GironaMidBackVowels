@@ -55,7 +55,7 @@ pacman::p_unload(pacman::p_loaded(), character.only = TRUE)
 ## LOAD "VOWELS" R PACKAGE
 library(vowels)
 
-source("/Users/evaboschroura/Desktop/PROCESSAMENT_DADES_PRODUCCIO/0_SCRIPTS/FUNCTION_normformat.R") # function to create data frame following NORM formant requirements
+source("/path/to/FUNCTION_normformat.R") # function to create data frame following NORM formant requirements
 
     ## read INPUT file
     form.data = read.delim(INPUT, header=TRUE, sep = "\t")
