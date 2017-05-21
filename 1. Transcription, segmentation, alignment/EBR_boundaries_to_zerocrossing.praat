@@ -13,7 +13,7 @@
 
 form Enter directory
   comment Directory
-  sentence inputDir /Users//Users/pathtofolder/whereyourinputis/
+  sentence inputDir /Users/pathtofolder/whereyourinputis/
   sentence outputDir /Users/pathtofolder/whereyouroutput/willgo/
   sentence Sound_extn .wav
 endform
