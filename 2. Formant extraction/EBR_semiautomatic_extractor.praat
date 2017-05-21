@@ -26,7 +26,7 @@ form Select directories for TextGrids and Sound files
 	comment NO PAS el primer per analitzar): # NOT first token to be analyzed)
 		integer starting_token_count 0
 		real Zoom_duration 0.5
-		sentence Output_file /Users/pathtofolder/whereyouroutput/willgo/(ARXIPRESTAT)_1formants.txt # (ARXIPRESTAT) will be replaced by the appropriate survey point code (see l. )
+		sentence Output_file /Users/pathtofolder/whereyouroutput/willgo/(ARXIPRESTAT)_1formants.txt # # Change output file name as necessary
 		positive Default_max_formant 5500 # default formant tracker settings, both max formant and number of formants can be changed during the analysis
 		integer Default_formant_number 5
 		real Time_step 0.1
