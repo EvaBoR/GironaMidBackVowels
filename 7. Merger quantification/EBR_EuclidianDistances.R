@@ -20,7 +20,7 @@
 library(pacman)
 pacman::p_unload(pacman::p_loaded(), character.only = TRUE)
 rm(list=ls(all=TRUE))
-options(scipen=999) ## disable scientific notation (instead of "3.225594e-06" => "")
+options(scipen=999) ## disable scientific notation (instead of "3.225594e-06" => "0.000003225594")
 
 ################################
 ## STUFF THAT NEEDS TO BE SET ##
