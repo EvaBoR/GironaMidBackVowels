@@ -11,7 +11,7 @@
 rm(list=ls(all=TRUE)) # clean work space
 library(pacman) #unload loaded packages, to prevent incompatibilities
 pacman::p_unload(pacman::p_loaded(), character.only = TRUE)
-options(scipen=999) ## disable scientific notation (instead of "3.225594e-06" => "")
+options(scipen=999) ## disable scientific notation (instead of "3.225594e-06" => "0.000003225594")
 
 ## SET UP
 INPUT <- "/path/to/input/TOT_normalitzat.txt"
