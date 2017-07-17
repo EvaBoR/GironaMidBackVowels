@@ -202,9 +202,15 @@ library(scales)
     # > T1 -------------------------------------------------------------------
       # >> F1 MODEL -------------------------------------------------------------------
 
-        mf_T1_F1  = lmer(Lobanov.F1 ~ SILposicio + FONANT + EDAT + SEXE + VOCAL +
-                                   SILposicio:VOCAL + FONANT:VOCAL + EDAT:VOCAL + SEXE:VOCAL +
-                                   (1+VOCAL|ARXIPRESTAT/INFORMANT) + (1|N.MOT), data=dfosT1f, REML=TRUE)
+          ## EXTRA INTERACTIONS (same interactions were tested for all other models)
+	  #mf_T1_F1  = lmer(Lobanov.F1 ~ SILposicio + FONANT + EDAT + SEXE + VOCAL +
+          #                         SILposicio:VOCAL + FONANT:VOCAL + EDAT:VOCAL + SEXE:VOCAL +
+	  #		            SILposicio:EDAT + SILposicio:SEXE + EDAT:SEXE + VOCAL:EDAT:SEXE +
+          #                         (1+VOCAL|ARXIPRESTAT/INFORMANT) + (1|N.MOT), data=dfosT1f, REML=TRUE)
+	
+	  mf_T1_F1  = lmer(Lobanov.F1 ~ SILposicio + FONANT + EDAT + SEXE + VOCAL +
+		   SILposicio:VOCAL + FONANT:VOCAL + EDAT:VOCAL + SEXE:VOCAL +
+		   (1+VOCAL|ARXIPRESTAT/INFORMANT) + (1|N.MOT), data=dfosT1f, REML=TRUE)
 
           # Check normality and heteroscedasticity of residuals, this looks pretty okay. (According to Gelman, A. & Hill, J., 2007. Data Analysis Using Regression and
           # Multilevel/Hierarchical Models, Cambridge: Cambridge University Press. p. 46, normality is not that relevant, and I already checked for outliers due to errors.)
