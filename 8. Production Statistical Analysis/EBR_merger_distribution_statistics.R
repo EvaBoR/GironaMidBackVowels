@@ -132,6 +132,8 @@ library(scales)
     
   ## Mixed-effects model for Bhattacharyya Coefficients as a function of Age, Gender and Area, with Deaneries as random effects
   
+  # CB_0 = lmer(BhaCoeff ~ EDAT + SEXE + EDAT:SEXE + ZONA + ZONA:EDAT + ZONA:SEXE + ZONA:EDAT:SEXE + (1|ARXIPRESTAT), data=resultsos, REML=TRUE)
+  
   CB_m = lmer(BhaCoeff ~ EDAT + SEXE + EDAT:SEXE + ZONA + ZONA:EDAT + ZONA:SEXE + (1|ARXIPRESTAT), data=resultsos, REML=TRUE)
     
     # Check normality and heteroscedasticity of residuals, this looks okay.
@@ -139,6 +141,8 @@ library(scales)
     # hist(resid(CB_m))
     # plot(scale(resid(CB_m)) ~ fitted(CB_m), pch = ".", cex = 2, ylim = c(-5, 5)) + abline(h = c(-2.5, 2.5))# plot to check for heteroscedasticity
   
+  # DE_0 = lmer(meanDE ~ EDAT + SEXE + EDAT:SEXE + ZONA + EDAT:ZONA + SEXE:ZONA + ZONA:EDAT:SEXE + (1|ARXIPRESTAT), data=resultsos, REML=TRUE)
+      
   DE_m = lmer(meanDE ~ EDAT + SEXE + EDAT:SEXE + ZONA + EDAT:ZONA + SEXE:ZONA + (1|ARXIPRESTAT), data=resultsos, REML=TRUE)
   
   # Check normality and heteroscedasticity of residuals, this looks okay.
